@@ -6,7 +6,7 @@
     "url": "https://boulangerie-dupont.fr"
   },
   "belongsTo": [
-    "https://viroflay.fr/.well-known/hub.json"
+    "https://paris.fr/.well-known/hub.json"
   ],
   "evidence": "https://paris.fr/commerces/dupont"
 }
