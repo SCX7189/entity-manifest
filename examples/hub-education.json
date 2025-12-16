@@ -1,0 +1,11 @@
+{
+  "spec": "entity-manifest/1.0",
+  "hub": {
+    "name": "Global Education Network",
+    "scope": "education"
+  },
+  "rules": [
+    "educational-purpose-only",
+    "no-commercial-ads"
+  ]
+}
