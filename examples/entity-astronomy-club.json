@@ -1,0 +1,11 @@
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Paris Astronomy Club",
+    "type": "association"
+  },
+  "claims": [
+    "non-commercial",
+    "educational"
+  ]
+}
