@@ -1,12 +1,14 @@
 {
   "spec": "entity-manifest/1.0",
   "entity": {
-    "name": "Boulangerie Dupont",
-    "type": "local-business",
-    "url": "https://boulangerie-dupont.fr"
+    "name": "Independent Bakery",
+    "type": "local-business"
   },
-  "belongsTo": [
-    "https://paris.fr/.well-known/hub.json"
+  "claims": [
+    "independent",
+    "local-production"
   ],
-  "evidence": "https://paris.fr/commerces/dupont"
+  "belongsTo": [
+    "https://paris.example/.well-known/hub.json"
+  ]
 }
