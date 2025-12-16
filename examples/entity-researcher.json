@@ -1,0 +1,14 @@
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Independent Researcher",
+    "type": "researcher"
+  },
+  "claims": [
+    "academic",
+    "non-commercial"
+  ],
+  "belongsTo": [
+    "https://research-network.example/.well-known/hub.json"
+  ]
+}
