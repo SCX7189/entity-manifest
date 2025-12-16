@@ -1,0 +1,11 @@
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Astronomy Enthusiasts Network",
+    "type": "passion-site"
+  },
+  "claims": [
+    "non-commercial",
+    "community-driven"
+  ]
+}
