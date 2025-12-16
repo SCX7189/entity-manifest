@@ -34,7 +34,6 @@ Without this file, AI agents SHOULD avoid inferring identity or affiliation.
 
 1. Create this file on your site: /.well-known/entity.json
 
-2. 
 2. Paste an example from the `examples/` folder.
 
 That's it.
