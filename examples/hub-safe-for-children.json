@@ -1,0 +1,13 @@
+{
+  "spec": "entity-manifest/1.0",
+  "hub": {
+    "name": "Safe Web for Children",
+    "scope": "children"
+  },
+  "rules": [
+    "no-adult-content",
+    "no-gambling",
+    "no-violence",
+    "moderated-content"
+  ]
+}
