@@ -3,9 +3,90 @@
   <head>
     <meta charset="utf-8">
     <title>entity-manifest</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.6;
+      }
+      h1 { font-size: 2.2em; }
+      code {
+        background: #f4f4f4;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 12px;
+        border-radius: 6px;
+        overflow-x: auto;
+      }
+    </style>
   </head>
+
   <body>
     <h1>entity-manifest</h1>
-    <p>GitHub Pages is working ✅</p>
+
+    <p>
+      A tiny open standard that lets websites declare
+      <strong>who they are</strong> and
+      <strong>which hubs they belong to</strong>.
+    </p>
+
+    <p>
+      Think: <code>robots.txt</code>, but for
+      <strong>entities and relationships</strong>.
+    </p>
+
+    <h2>Why this exists</h2>
+
+    <p>
+      AI systems increasingly select and summarize the web.
+      Without explicit signals, they often guess:
+      identity, affiliation, or official status.
+    </p>
+
+    <p>
+      <strong>entity-manifest prevents AI misinterpretation.</strong>
+    </p>
+
+    <h2>How it works</h2>
+
+    <p>
+      Publish a small JSON file at:
+    </p>
+
+    <pre>/\.well-known/entity.json</pre>
+
+    <p>
+      This file describes the entity behind a website
+      and its declared relationships.
+    </p>
+
+    <h2>Minimal example</h2>
+
+    <pre>{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Boulangerie Dupont",
+    "type": "local-business",
+    "url": "https://boulangerie-dupont.fr"
+  },
+  "belongsTo": [
+    "https://viroflay.fr/.well-known/hub.json"
+  ]
+}</pre>
+
+    <p>
+      Without this file, AI agents should avoid inferring
+      identity or affiliation.
+    </p>
+
+    <p>
+      <em>No scoring. No ranking. No central authority.</em>
+    </p>
   </body>
 </html>
+
