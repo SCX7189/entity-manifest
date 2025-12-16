@@ -38,5 +38,15 @@ The manifest is published as a JSON file at: /.well-known/entity.json
 This project is an early-stage open standard proposal.
 Feedback and discussion are welcome.
 
+## Related standards and concepts
+
+Entity Manifest is conceptually related to:
+
+- The `.well-known` URI standard (RFC 8615)
+- Semantic Web and linked data principles
+- Knowledge graphs and entity resolution
+- Structured metadata for AI and search systems
+
+It is designed to be simple, declarative, and complementary to existing approaches.
 
 
