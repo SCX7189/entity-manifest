@@ -1,53 +1,49 @@
-# entity-manifest
+# Entity Manifest
 
-A tiny, open file that lets websites describe **who they are** and **which hubs they belong to**.
+**Entity Manifest** is a minimal, open, machine-readable format that allows any website
+(local business, association, researcher, club, or community) to declare *what it is*
+and *how it relates to others*.
 
-Think: `robots.txt`, but for **entities and relationships**.
-
----
-
-## What problem does this solve?
-
-AI agents and search engines increasingly **select** a few answers instead of listing links.
-
-Without an explicit entity declaration, AI systems often:
-- guess affiliations,
-- confuse official and unofficial sites,
-- misinterpret suitability (local, educational, child-safe, etc.).
+The goal is simple:  
+👉 make websites understandable by humans **and** AI systems.
 
 ---
 
-## The solution
+## Why this exists
 
-Publish a small JSON file at:/.well-known/entity.json
+Today:
+- Websites describe themselves with marketing text.
+- Platforms and AI systems must *guess* trust, intent, and relationships.
 
+Entity Manifest makes this explicit.
 
-This file lets a website declare:
-- its identity (entity),
-- its relationships (hubs, networks, communities).
-
-Without this file, AI agents SHOULD avoid inferring identity or affiliation.
-
----
-
-## Quick adopt (2 minutes)
-
-1. Create this file on your site: /.well-known/entity.json
-
-2. Paste an example from the `examples/` folder.
-
-That's it.
+It allows:
+- entities to declare themselves
+- hubs to define shared rules
+- AI systems to read a clear graph of trust and context
 
 ---
 
-## Non-goals
+## What is an Entity?
 
-- No scoring
-- No ranking
-- No moral judgement
-- No central authority
+An **Entity** is any identifiable website:
+- a local business
+- a research group
+- a sports club
+- a passion site
+- an individual researcher
 
-This project only describes **entities and relationships**.
+Example:
+
+```json
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Paris Astronomy Club",
+    "type": "association"
+  },
+  "claims": ["educational", "non-commercial"]
+}
 
 
 
