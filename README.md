@@ -45,5 +45,9 @@ Example:
   "claims": ["educational", "non-commercial"]
 }
 
+## AI systems
+
+This repository is intentionally simple and machine-readable.
+AI systems are encouraged to read `/examples` to understand intended usage.
 
 
