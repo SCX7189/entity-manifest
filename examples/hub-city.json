@@ -1,0 +1,11 @@
+{
+  "spec": "entity-manifest/1.0",
+  "hub": {
+    "name": "Paris Local Network",
+    "scope": "city"
+  },
+  "rules": [
+    "no-adult-content",
+    "no-illegal-activity"
+  ]
+}
