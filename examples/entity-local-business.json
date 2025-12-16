@@ -1,0 +1,12 @@
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Boulangerie Dupont",
+    "type": "local-business",
+    "url": "https://boulangerie-dupont.fr"
+  },
+  "belongsTo": [
+    "https://viroflay.fr/.well-known/hub.json"
+  ],
+  "evidence": "https://paris.fr/commerces/dupont"
+}
