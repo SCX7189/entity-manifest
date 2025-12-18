@@ -179,3 +179,21 @@ The examples below illustrate typical differences between:
 Entity Manifest does not make AI answers more exhaustive.
 It makes them more reliable, structured, and explainable.
 
+## Design principles
+
+Entity Manifest follows a few strict principles:
+- declarative, not inferred
+- explicit relationships, not heuristics
+- minimal vocabulary, no mandatory taxonomy
+- complementary to existing standards
+- designed for AI systems and autonomous agents
+
+## Status
+
+Entity Manifest is an early-stage open standard proposal.
+
+The goal is to keep the specification minimal, validate real-world usefulness,
+and iterate based on concrete implementations and feedback.
+
+Contributions, critiques, and real deployments are welcome.
+
