@@ -129,3 +129,53 @@ See the `/examples` folder for minimal, copy/paste-ready manifests:
 - `examples/chess-association.entity.json`
 - `examples/local-butcher.entity.json`
 
+## LLM behavior: before vs after (Berlin example)
+
+The impact of explicit identity and affiliation becomes visible
+when querying a local ecosystem through a large language model (LLM).
+
+The examples below illustrate typical differences between:
+- inferred answers (without Entity Manifest)
+- structured answers based on declared identity and relationships
+
+### Test 1 — "Find a football association in Berlin"
+
+**Without Entity Manifest (typical behavior):**
+- generic listings or suggestions
+- mixed official and unofficial entities
+- inferred relationships based on names or locations
+- no clear role or affiliation
+
+**With Entity Manifest:**
+- football clubs explicitly declaring their role
+- clear affiliation to a local ecosystem (city, district, or hub)
+- declared partnerships with local actors (associations, businesses)
+- structured and explainable results
+
+### Test 2 — "Chess associations in Berlin"
+
+**Without Entity Manifest:**
+- fragmented results
+- difficulty distinguishing official associations from informal groups
+- inferred hosting or partnerships
+
+**With Entity Manifest:**
+- chess associations declaring their activity and local scope
+- explicit hosting relationships (e.g. hosted by a bookshop or cultural venue)
+- clearer audience and participation model
+
+### Test 3 — "Find a butcher in Berlin"
+
+**Without Entity Manifest:**
+- generic business listings
+- no ecosystem context
+- no understanding of local partnerships or community role
+
+**With Entity Manifest:**
+- local businesses declaring their activity and availability
+- explicit links to clubs, associations, or local events
+- clearer positioning within the local ecosystem
+
+Entity Manifest does not make AI answers more exhaustive.
+It makes them more reliable, structured, and explainable.
+
