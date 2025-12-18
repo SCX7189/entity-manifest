@@ -66,11 +66,57 @@ City Hub
   ↳ Football Club ── partnersWith ── Local Butcher
   ↳ Chess Association ── hostedBy ── Independent Bookshop
   ↳ Youth Association ── affiliatedWith ── Football Club
+  
 This allows AI systems and agents to:
 - map local ecosystems reliably
 - distinguish hubs from independent actors
 - understand relationships between entities
 - route users to actionable services without guesswork
 
+## LLM behavior: before vs after (Berlin example)
+
+The difference between inferred data and declared identity becomes clear
+when querying a local ecosystem through an LLM.
+
+### Test 1 — "Find a football association in Berlin"
+
+**Without Entity Manifest (typical behavior):**
+- generic listings
+- vague descriptions
+- no clear affiliation or role
+- unclear how entities relate to each other
+
+**With Entity Manifest:**
+- declared football associations
+- explicit affiliation to a local ecosystem (city, district, or hub)
+- clear relationships with other local actors (clubs, associations, sponsors)
+- structured, explainable response
+
+### Test 2 — "Chess associations in Berlin"
+
+**Without Entity Manifest:**
+- fragmented results
+- mixed official and unofficial entities
+- inferred relationships
+
+**With Entity Manifest:**
+- declared chess associations
+- explicit hosting or partnership relationships
+- clear local scope and audience
+
+### Test 3 — "Find a butcher in Berlin"
+
+**Without Entity Manifest:**
+- generic business listings
+- no ecosystem context
+- no understanding of local partnerships
+
+**With Entity Manifest:**
+- local butchers declaring their role
+- explicit links to clubs, associations, or events
+- clear positioning inside the local ecosystem
+
+Entity Manifest does not make AI answers more exhaustive.
+It makes them more reliable, structured, and explainable.
 
 
