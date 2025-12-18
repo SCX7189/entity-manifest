@@ -121,4 +121,11 @@ when querying a local ecosystem through an LLM.
 Entity Manifest does not make AI answers more exhaustive.
 It makes them more reliable, structured, and explainable.
 
+## Examples
+
+See the `/examples` folder for minimal, copy/paste-ready manifests:
+- `examples/city-hub.entity.json`
+- `examples/football-club.entity.json`
+- `examples/chess-association.entity.json`
+- `examples/local-butcher.entity.json`
 
