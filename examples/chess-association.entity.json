@@ -1,0 +1,30 @@
+{
+  "entity": {
+    "name": "Berlin Chess Association (Example)",
+    "type": "Association",
+    "claims": {
+      "local": true,
+      "category": "culture-and-sports",
+      "activity": "chess",
+      "audience": ["youth", "adults"]
+    },
+    "relations": {
+      "affiliatedWithHub": {
+        "name": "Berlin",
+        "type": "Municipality",
+        "role": "local-ecosystem-hub"
+      },
+      "hostedBy": {
+        "name": "Independent Bookshop (Example)",
+        "type": "LocalBusiness",
+        "category": "bookshop"
+      }
+    },
+    "capabilities": {
+      "events": {
+        "organizes": true,
+        "frequency": "weekly"
+      }
+    }
+  }
+}
