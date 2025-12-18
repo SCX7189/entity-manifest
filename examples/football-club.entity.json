@@ -1,0 +1,32 @@
+{
+  "entity": {
+    "name": "Berlin Football Club (Example)",
+    "type": "Club",
+    "claims": {
+      "local": true,
+      "category": "sports",
+      "sport": "football",
+      "audience": ["youth", "adults"]
+    },
+    "relations": {
+      "affiliatedWithHub": {
+        "name": "Berlin",
+        "type": "Municipality",
+        "role": "local-ecosystem-hub"
+      },
+      "partnersWith": [
+        {
+          "name": "Local Butcher (Example)",
+          "type": "LocalBusiness",
+          "category": "butcher"
+        }
+      ]
+    },
+    "capabilities": {
+      "membership": {
+        "join": true,
+        "channels": ["email", "website-form"]
+      }
+    }
+  }
+}
