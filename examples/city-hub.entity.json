@@ -1,0 +1,18 @@
+{
+  "entity": {
+    "name": "Berlin",
+    "type": "Municipality",
+    "roles": ["local-ecosystem-hub"],
+    "claims": {
+      "scope": "local",
+      "mission": [
+        "help residents find services",
+        "support local associations and clubs",
+        "support local commerce"
+      ]
+    },
+    "relations": {
+      "hostsEcosystem": ["clubs", "associations", "local-businesses", "healthcare-providers"]
+    }
+  }
+}
