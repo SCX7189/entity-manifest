@@ -1,4 +1,5 @@
 # Entity Manifest
+
 Make a website’s identity and affiliations explicit for AI systems — without inference or guesswork.
 
 AI systems increasingly decide who you are, what you belong to, and how your content is grouped.
@@ -13,6 +14,8 @@ It allows a site to declare:
 - which organizations, hubs, or ecosystems it belongs to
 - optional capabilities (booking, reservation, membership, same-day availability)
 
+---
+
 ## Why this exists now
 
 Modern AI systems summarize websites, build knowledge graphs, and route users to services.
@@ -26,6 +29,7 @@ This often leads to:
 
 Entity Manifest replaces inference with declaration.
 
+---
 
 ## Relation to schema.org
 
@@ -37,8 +41,10 @@ Entity Manifest complements schema.org by introducing:
 - a stable, well-known publication location
 - explicit roles and affiliations
 
-Use schema.org for content.
+Use schema.org for content.  
 Use Entity Manifest to declare who is behind the site.
+
+---
 
 ## Quickstart (1 minute)
 
@@ -49,6 +55,8 @@ Use Entity Manifest to declare who is behind the site.
    - valid JSON
    - stable URL (avoid redirects if possible)
 4. Done — AI systems and agents can now fetch a canonical identity document.
+
+---
 
 ## Example: local ecosystems (cities, clubs, associations, businesses)
 
@@ -62,133 +70,106 @@ Entity Manifest and explicitly declare their affiliations.
 Affiliations are not inferred.
 They are declared, with clear provenance.
 
+```text
 City Hub
   ↳ Football Club ── partnersWith ── Local Butcher
   ↳ Chess Association ── hostedBy ── Independent Bookshop
   ↳ Youth Association ── affiliatedWith ── Football Club
+````
 
 Once these declarations are available, AI systems no longer need to infer relationships.
-  
+
 As a result, AI systems and agents can:
-- map local ecosystems reliably
-- distinguish hubs from independent actors
-- understand relationships between entities
-- route users to actionable services without guesswork
+
+* map local ecosystems reliably
+* distinguish hubs from independent actors
+* understand relationships between entities
+* route users to actionable services without guesswork
+
+---
 
 ## LLM behavior: before vs after (Berlin example)
 
 The difference between inferred data and declared identity becomes clear
-when querying a local ecosystem through an LLM.
+when querying a local ecosystem through a large language model (LLM).
 
 ### Test 1 — "Find a football association in Berlin"
 
 **Without Entity Manifest (typical behavior):**
-- generic listings
-- vague descriptions
-- no clear affiliation or role
-- unclear how entities relate to each other
+
+* generic listings
+* vague descriptions
+* no clear affiliation or role
+* unclear how entities relate to each other
 
 **With Entity Manifest:**
-- declared football associations
-- explicit affiliation to a local ecosystem (city, district, or hub)
-- clear relationships with other local actors (clubs, associations, sponsors)
-- structured, explainable response
+
+* declared football associations
+* explicit affiliation to a local ecosystem (city, district, or hub)
+* clear relationships with other local actors (clubs, associations, sponsors)
+* structured, explainable responses
+
+---
 
 ### Test 2 — "Chess associations in Berlin"
 
 **Without Entity Manifest:**
-- fragmented results
-- mixed official and unofficial entities
-- inferred relationships
+
+* fragmented results
+* mixed official and unofficial entities
+* inferred relationships
 
 **With Entity Manifest:**
-- declared chess associations
-- explicit hosting or partnership relationships
-- clear local scope and audience
+
+* declared chess associations
+* explicit hosting or partnership relationships
+* clear local scope and audience
+
+---
 
 ### Test 3 — "Find a butcher in Berlin"
 
 **Without Entity Manifest:**
-- generic business listings
-- no ecosystem context
-- no understanding of local partnerships
+
+* generic business listings
+* no ecosystem context
+* no understanding of local partnerships
 
 **With Entity Manifest:**
-- local butchers declaring their role
-- explicit links to clubs, associations, or events
-- clear positioning inside the local ecosystem
+
+* local businesses declaring their role
+* explicit links to clubs, associations, or events
+* clear positioning inside the local ecosystem
 
 Entity Manifest does not make AI answers more exhaustive.
 It makes them more reliable, structured, and explainable.
+
+---
 
 ## Examples
 
 See the `/examples` folder for minimal, copy/paste-ready manifests:
-- `examples/city-hub.entity.json`
-- `examples/football-club.entity.json`
-- `examples/chess-association.entity.json`
-- `examples/local-butcher.entity.json`
 
-## LLM behavior: before vs after (Berlin example)
+* `examples/city-hub.entity.json`
+* `examples/football-club.entity.json`
+* `examples/chess-association.entity.json`
+* `examples/local-butcher.entity.json`
 
-The impact of explicit identity and affiliation becomes visible
-when querying a local ecosystem through a large language model (LLM).
-
-The examples below illustrate typical differences between:
-- inferred answers (without Entity Manifest)
-- structured answers based on declared identity and relationships
-
-### Test 1 — "Find a football association in Berlin"
-
-**Without Entity Manifest (typical behavior):**
-- generic listings or suggestions
-- mixed official and unofficial entities
-- inferred relationships based on names or locations
-- no clear role or affiliation
-
-**With Entity Manifest:**
-- football clubs explicitly declaring their role
-- clear affiliation to a local ecosystem (city, district, or hub)
-- declared partnerships with local actors (associations, businesses)
-- structured and explainable results
-
-### Test 2 — "Chess associations in Berlin"
-
-**Without Entity Manifest:**
-- fragmented results
-- difficulty distinguishing official associations from informal groups
-- inferred hosting or partnerships
-
-**With Entity Manifest:**
-- chess associations declaring their activity and local scope
-- explicit hosting relationships (e.g. hosted by a bookshop or cultural venue)
-- clearer audience and participation model
-
-### Test 3 — "Find a butcher in Berlin"
-
-**Without Entity Manifest:**
-- generic business listings
-- no ecosystem context
-- no understanding of local partnerships or community role
-
-**With Entity Manifest:**
-- local businesses declaring their activity and availability
-- explicit links to clubs, associations, or local events
-- clearer positioning within the local ecosystem
-
-Entity Manifest does not make AI answers more exhaustive.
-It makes them more reliable, structured, and explainable.
+---
 
 ## Design principles
 
 Entity Manifest follows a few strict principles:
-- declarative, not inferred
-- explicit relationships, not heuristics
-- minimal vocabulary, no mandatory taxonomy
-- complementary to existing standards
-- designed for AI systems and autonomous agents
 
- ## JSON-LD compatibility (optional)
+* declarative, not inferred
+* explicit relationships, not heuristics
+* minimal vocabulary, no mandatory taxonomy
+* complementary to existing standards
+* designed for AI systems and autonomous agents
+
+---
+
+## JSON-LD compatibility (optional)
 
 Entity Manifest uses plain JSON for simplicity.
 
@@ -197,8 +178,9 @@ to improve interoperability with existing semantic web tools.
 
 Using JSON-LD is optional and not required by the specification.
 
+---
 
-  ## Trust and verification
+## Trust and verification
 
 Entity Manifest is declarative by design.
 
@@ -206,22 +188,27 @@ An affiliation declared in an Entity Manifest represents a claim made by the pub
 It does not imply verification, certification, or endorsement.
 
 AI systems and agents may apply their own trust policies, for example:
-- requiring reciprocal declarations (bidirectional affiliation)
-- cross-checking with other trusted sources
-- weighting declarations based on reputation or context
+
+* requiring reciprocal declarations (bidirectional affiliation)
+* cross-checking with other trusted sources
+* weighting declarations based on reputation or context
 
 Separating declaration from verification is intentional.
+
+---
 
 ## Ecosystem and future work
 
 Possible extensions around Entity Manifest include:
-- online validators
-- visualization tools (entity graphs)
-- agent implementations demonstrating before/after behavior
-- trust and reputation models built on top of declarations
+
+* online validators
+* visualization tools (entity graphs)
+* agent implementations demonstrating before/after behavior
+* trust and reputation models built on top of declarations
 
 These are intentionally out of scope for the core specification.
 
+---
 
 ## Status
 
