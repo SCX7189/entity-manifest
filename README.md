@@ -212,6 +212,16 @@ AI systems and agents may apply their own trust policies, for example:
 
 Separating declaration from verification is intentional.
 
+## Ecosystem and future work
+
+Possible extensions around Entity Manifest include:
+- online validators
+- visualization tools (entity graphs)
+- agent implementations demonstrating before/after behavior
+- trust and reputation models built on top of declarations
+
+These are intentionally out of scope for the core specification.
+
 
 ## Status
 
