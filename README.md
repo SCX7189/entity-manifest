@@ -188,6 +188,16 @@ Entity Manifest follows a few strict principles:
 - complementary to existing standards
 - designed for AI systems and autonomous agents
 
+   ## JSON-LD compatibility (optional)
+
+Entity Manifest uses plain JSON for simplicity.
+
+Implementations MAY choose to include a JSON-LD `@context`
+to improve interoperability with existing semantic web tools.
+
+Using JSON-LD is optional and not required by the specification.
+
+
   ## Trust and verification
 
 Entity Manifest is declarative by design.
