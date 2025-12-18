@@ -1,0 +1,37 @@
+{
+  "entity": {
+    "name": "Local Butcher (Example)",
+    "type": "LocalBusiness",
+    "claims": {
+      "local": true,
+      "category": "butcher",
+      "independent": true
+    },
+    "relations": {
+      "affiliatedWithHub": {
+        "name": "Berlin",
+        "type": "Municipality",
+        "role": "local-ecosystem-hub"
+      },
+      "partnersWith": [
+        {
+          "name": "Berlin Football Club (Example)",
+          "type": "Club",
+          "category": "sports",
+          "sport": "football"
+        }
+      ]
+    },
+    "capabilities": {
+      "reservation": {
+        "supported": true,
+        "leadTime": "same-day",
+        "channels": ["phone"]
+      },
+      "availability": {
+        "frequency": "daily",
+        "notes": "fresh meat daily"
+      }
+    }
+  }
+}
