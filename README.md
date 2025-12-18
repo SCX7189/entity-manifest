@@ -66,8 +66,10 @@ City Hub
   ↳ Football Club ── partnersWith ── Local Butcher
   ↳ Chess Association ── hostedBy ── Independent Bookshop
   ↳ Youth Association ── affiliatedWith ── Football Club
+
+Once these declarations are available, AI systems no longer need to infer relationships.
   
-This allows AI systems and agents to:
+As a result, AI systems and agents can:
 - map local ecosystems reliably
 - distinguish hubs from independent actors
 - understand relationships between entities
