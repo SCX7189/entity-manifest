@@ -1,52 +1,76 @@
 # Entity Manifest
+Make a website’s identity and affiliations explicit for AI systems — without inference or guesswork.
 
-Entity Manifest is a small open standard that allows a website to explicitly declare:
+AI systems increasingly decide who you are, what you belong to, and how your content is grouped.
+When identity signals are implicit, they guess — and they often guess wrong.
 
+Entity Manifest is a small open standard that lets a website publish a single, canonical identity document at:
+`/.well-known/entity.json`
+
+It allows a site to declare:
 - who it is (the entity behind the site)
 - what type of entity it represents
 - which organizations, hubs, or ecosystems it belongs to
+- optional capabilities (booking, reservation, membership, same-day availability)
 
-The goal is to reduce ambiguity for AI systems, search engines, and automated agents.
+## Why this exists now
 
-## What this repository provides
+Modern AI systems summarize websites, build knowledge graphs, and route users to services.
+Without an explicit identity anchor, they infer identity and affiliation from scattered signals:
+content, links, metadata, heuristics.
 
-- A simple JSON specification for an entity declaration
-- A recommended location using the `.well-known` pattern
-- Examples of how websites can expose identity and relationships in a machine-readable way
+This often leads to:
+- misattributed ownership
+- invented affiliations
+- unclear authority
 
-## Why this matters
-
-AI systems increasingly summarize, classify, and rank web content.
-Without explicit signals, they often infer identity and affiliation incorrectly.
-
-Entity Manifest provides a clear, declarative signal instead of implicit guessing.
-
-## Typical use cases
-
-- Websites that want to declare their official identity
-- Organizations belonging to a network, hub, or group
-- Local governments, companies, communities, or projects
-- AI agents and crawlers needing reliable entity metadata
-
-## Format
-
-The manifest is published as a JSON file at: /.well-known/entity.json
+Entity Manifest replaces inference with declaration.
 
 
-## Status
+## Relation to schema.org
 
-This project is an early-stage open standard proposal.
-Feedback and discussion are welcome.
+Schema.org allows websites to describe organizations and entities inside pages.
+It does not provide a single, canonical, site-level identity declaration.
 
-## Related standards and concepts
+Entity Manifest complements schema.org by introducing:
+- a dedicated identity document
+- a stable, well-known publication location
+- explicit roles and affiliations
 
-Entity Manifest is conceptually related to:
+Use schema.org for content.
+Use Entity Manifest to declare who is behind the site.
 
-- The `.well-known` URI standard (RFC 8615)
-- Semantic Web and linked data principles
-- Knowledge graphs and entity resolution
-- Structured metadata for AI and search systems
+## Quickstart (1 minute)
 
-It is designed to be simple, declarative, and complementary to existing approaches.
+1. Create a JSON file named `entity.json`
+2. Publish it at `/.well-known/entity.json`
+3. Verify:
+   - HTTP 200 response
+   - valid JSON
+   - stable URL (avoid redirects if possible)
+4. Done — AI systems and agents can now fetch a canonical identity document.
+
+## Example: local ecosystems (cities, clubs, associations, businesses)
+
+Entity Manifest makes it possible to describe local ecosystems as declarative graphs,
+instead of inferred directories.
+
+A city can declare itself as a local ecosystem hub.
+Independent entities — clubs, associations, businesses, professionals — publish their own
+Entity Manifest and explicitly declare their affiliations.
+
+Affiliations are not inferred.
+They are declared, with clear provenance.
+
+City Hub
+  ↳ Football Club ── partnersWith ── Local Butcher
+  ↳ Chess Association ── hostedBy ── Independent Bookshop
+  ↳ Youth Association ── affiliatedWith ── Football Club
+This allows AI systems and agents to:
+- map local ecosystems reliably
+- distinguish hubs from independent actors
+- understand relationships between entities
+- route users to actionable services without guesswork
+
 
 
