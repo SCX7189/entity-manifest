@@ -188,6 +188,21 @@ Entity Manifest follows a few strict principles:
 - complementary to existing standards
 - designed for AI systems and autonomous agents
 
+  ## Trust and verification
+
+Entity Manifest is declarative by design.
+
+An affiliation declared in an Entity Manifest represents a claim made by the publishing entity.
+It does not imply verification, certification, or endorsement.
+
+AI systems and agents may apply their own trust policies, for example:
+- requiring reciprocal declarations (bidirectional affiliation)
+- cross-checking with other trusted sources
+- weighting declarations based on reputation or context
+
+Separating declaration from verification is intentional.
+
+
 ## Status
 
 Entity Manifest is an early-stage open standard proposal.
