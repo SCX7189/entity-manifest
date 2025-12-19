@@ -131,42 +131,4 @@ See below for real examples.
 }
 
 
-📌 Contributing
-
-See CONTRIBUTING.md for contribution guidelines.
-This project is licensed under the MIT License — see the LICENSE file for details.
-
----
-
-# ✅ STEP 2 — Add a **CONTRIBUTING.md**
-
----
-
-### 📌 What it is
-
-A simple, clear guide explaining:
-
-- How devs contribute
-- How to format commits
-- How to add examples
-
-This helps lower the barrier for contributions and moderates expectations.
-
----
-
-### 📌 CONTRIBUTING.md (ready to paste)
-
-```markdown
-# Contributing to Entity Manifest
-
-Thank you for your interest in contributing!  
-This document explains how to contribute in a structured and effective way.
-
----
-
-## 🛠 How to Contribute
-
-1. **Fork this repository**
-2. **Create a branch for your change**
-   ```sh
-   git checkout -b feature/your-change
+ 
