@@ -135,15 +135,67 @@ See below for real examples.
 
 &nbsp;
 
-## 📌 Contributing
+📌 Contributing
 
-If you would like to contribute to this project, please see the `CONTRIBUTING.md` file.
+See CONTRIBUTING.md for contribution guidelines.
 
-We welcome improvements, examples, issue reports and feedback.
+📜 License
+
+This project is licensed under the MIT License — see the LICENSE file.
+
 
 ---
 
-## 📜 License
+# 2) Texte COMPLET à mettre dans **CONTRIBUTING.md**
 
-This project is licensed under the **MIT License** — see the `LICENSE` file for details.
+Crée ce fichier et colle exactement ce texte :
 
+```markdown
+# Contributing to Entity Manifest
+
+Thank you for your interest in contributing!  
+This document explains how to contribute in a structured and effective way.
+
+---
+
+## 🛠️ How to Contribute
+
+If you are the owner:
+1. Open the file on GitHub.
+2. Click the ✏️ button to edit.
+3. Paste your changes.
+4. Enter a clear commit message.
+
+If not the owner:
+1. Fork the repository.
+2. Edit in your fork.
+3. Open a Pull Request.
+
+---
+
+## 📌 Style Guidelines
+
+Please follow these conventions:
+
+- JSON indentation should be **2 spaces**
+- Property names in JSON should use **camelCase**
+- Clear and descriptive commit messages
+
+---
+
+## 📦 Adding Examples
+
+To add a new JSON example:
+
+1. Put it in an `examples/` folder
+2. Make sure it’s valid JSON
+3. Add a description in the main README
+
+---
+
+## 🙋 Support
+
+If you need help:
+
+- Open an issue
+- Describe your goal clearly
