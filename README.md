@@ -110,9 +110,6 @@ See below for real examples.
     "membership-info"
   ]
 }
-```json
-
-```json
 {
   "entity": {
     "name": "TechX Solutions",
