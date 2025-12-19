@@ -1,221 +1,170 @@
 # Entity Manifest
 
-Make a website’s identity and affiliations explicit for AI systems — without inference or guesswork.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-AI systems increasingly decide who you are, what you belong to, and how your content is grouped.
-When identity signals are implicit, they guess — and they often guess wrong.
+Entity Manifest is an **open specification** for publishing structured identity and relationships for websites, organizations and digital ecosystems via a canonical JSON document available at:
 
-Entity Manifest is a small open standard that lets a website publish a single, canonical identity document at:
-`/.well-known/entity.json`
+https://<your-domain>/.well-known/entity.json
 
-It allows a site to declare:
-- who it is (the entity behind the site)
-- what type of entity it represents
-- which organizations, hubs, or ecosystems it belongs to
-- optional capabilities (booking, reservation, membership, same-day availability)
+It enables AI agents, semantic crawlers, and intelligent applications to understand and process the identity of a site in a predictable and machine-readable way.
 
 ---
 
-## Why this exists now
+## 🚀 What is Entity Manifest?
 
-Modern AI systems summarize websites, build knowledge graphs, and route users to services.
-Without an explicit identity anchor, they infer identity and affiliation from scattered signals:
-content, links, metadata, heuristics.
+Entity Manifest provides a **standard JSON format** to declare:
 
-This often leads to:
-- misattributed ownership
-- invented affiliations
-- unclear authority
+- Who owns or operates a site
+- What type of entity it represents
+- Key affiliations or partnerships
+- Capabilities and services it provides
 
-Entity Manifest replaces inference with declaration.
+Unlike scraping HTML or inferring relationships, this format delivers **explicit structured data** for:
 
----
-
-## Relation to schema.org
-
-Schema.org allows websites to describe organizations and entities inside pages.
-It does not provide a single, canonical, site-level identity declaration.
-
-Entity Manifest complements schema.org by introducing:
-- a dedicated identity document
-- a stable, well-known publication location
-- explicit roles and affiliations
-
-Use schema.org for content.  
-Use Entity Manifest to declare who is behind the site.
+- AI language models (LLMs) and autonomous agents
+- Semantic search engines
+- Knowledge graphs
+- Distributed applications
 
 ---
 
-## Quickstart (1 minute)
+## 🧠 Why it matters
 
-1. Create a JSON file named `entity.json`
-2. Publish it at `/.well-known/entity.json`
-3. Verify:
-   - HTTP 200 response
-   - valid JSON
-   - stable URL (avoid redirects if possible)
-4. Done — AI systems and agents can now fetch a canonical identity document.
+Traditionally, machines try to guess context from unstructured HTML. This leads to:
 
----
+- incomplete understanding
+- fuzzy or incorrect relationships
+- poor semantic indexing
 
-## Example: local ecosystems (cities, clubs, associations, businesses)
-
-Entity Manifest makes it possible to describe local ecosystems as declarative graphs,
-instead of inferred directories.
-
-A city can declare itself as a local ecosystem hub.
-Independent entities — clubs, associations, businesses, professionals — publish their own
-Entity Manifest and explicitly declare their affiliations.
-
-Affiliations are not inferred.
-They are declared, with clear provenance.
-
-```text
-City Hub
-  ↳ Football Club ── partnersWith ── Local Butcher
-  ↳ Chess Association ── hostedBy ── Independent Bookshop
-  ↳ Youth Association ── affiliatedWith ── Football Club
-````
-
-Once these declarations are available, AI systems no longer need to infer relationships.
-
-As a result, AI systems and agents can:
-
-* map local ecosystems reliably
-* distinguish hubs from independent actors
-* understand relationships between entities
-* route users to actionable services without guesswork
+Entity Manifest removes guesswork and empowers systems with **explicit identity metadata**.
 
 ---
 
-## LLM behavior: before vs after (Berlin example)
+## 🧪 Example Usage
 
-The difference between inferred data and declared identity becomes clear
-when querying a local ecosystem through a large language model (LLM).
+### Scenario: Finding a Local Organization with an AI
 
-### Test 1 — "Find a football association in Berlin"
+A semantic agent wants to discover organizations in a city.
 
-**Without Entity Manifest (typical behavior):**
+1. Agent requests the `entity.json` file.
+2. Parses JSON for entity metadata and affiliations.
+3. Uses this structured data to answer queries and build graphs.
 
-* generic listings
-* vague descriptions
-* no clear affiliation or role
-* unclear how entities relate to each other
+GET https://example.org/.well-known/entity.json
 
-**With Entity Manifest:**
-
-* declared football associations
-* explicit affiliation to a local ecosystem (city, district, or hub)
-* clear relationships with other local actors (clubs, associations, sponsors)
-* structured, explainable responses
 
 ---
 
-### Test 2 — "Chess associations in Berlin"
+## 📄 JSON Structure
 
-**Without Entity Manifest:**
+At minimum, an Entity Manifest file contains:
 
-* fragmented results
-* mixed official and unofficial entities
-* inferred relationships
+- `entity`: core identity object
+- `affiliations`: relationships to other entities
+- `capabilities`: list of services or functions
 
-**With Entity Manifest:**
-
-* declared chess associations
-* explicit hosting or partnership relationships
-* clear local scope and audience
+See below for real examples.
 
 ---
 
-### Test 3 — "Find a butcher in Berlin"
+## 🌍 Real Examples
 
-**Without Entity Manifest:**
+### Example 1: Municipality
 
-* generic business listings
-* no ecosystem context
-* no understanding of local partnerships
+```json
+{
+  "entity": {
+    "name": "City of Grenoble",
+    "url": "https://grenoble.fr",
+    "type": "Municipality",
+    "description": "French city and metropolitan area located in the Alps."
+  },
+  "affiliations": [
+    {
+      "entity": "Université Grenoble Alpes",
+      "role": "educationPartner",
+      "url": "https://univ-grenoble-alpes.fr"
+    }
+  ],
+  "capabilities": [
+    "government-services",
+    "tourism-info"
+  ]
+}
+{
+  "entity": {
+    "name": "Lyon Amateur Football Club",
+    "url": "https://cfalyon.org",
+    "type": "SportsClub",
+    "description": "Amateur football association based in Lyon."
+  },
+  "affiliations": [
+    {
+      "entity": "Fédération Française de Football",
+      "role": "memberOf",
+      "url": "https://fff.fr"
+    }
+  ],
+  "capabilities": [
+    "sports-activities",
+    "membership-info"
+  ]
+}
+{
+  "entity": {
+    "name": "TechX Solutions",
+    "url": "https://techxsolutions.com",
+    "type": "Organization",
+    "description": "Company specializing in AI solutions."
+  },
+  "affiliations": [
+    {
+      "entity": "Global Cloud Partner",
+      "role": "partner",
+      "url": "https://partner-cloud.global"
+    }
+  ],
+  "capabilities": [
+    "cloud-services",
+    "ai-integration"
+  ]
+}
+📌 Contributing
 
-**With Entity Manifest:**
-
-* local businesses declaring their role
-* explicit links to clubs, associations, or events
-* clear positioning inside the local ecosystem
-
-Entity Manifest does not make AI answers more exhaustive.
-It makes them more reliable, structured, and explainable.
-
----
-
-## Examples
-
-See the `/examples` folder for minimal, copy/paste-ready manifests:
-
-* `examples/city-hub.entity.json`
-* `examples/football-club.entity.json`
-* `examples/chess-association.entity.json`
-* `examples/local-butcher.entity.json`
-
----
-
-## Design principles
-
-Entity Manifest follows a few strict principles:
-
-* declarative, not inferred
-* explicit relationships, not heuristics
-* minimal vocabulary, no mandatory taxonomy
-* complementary to existing standards
-* designed for AI systems and autonomous agents
-
----
-
-## JSON-LD compatibility (optional)
-
-Entity Manifest uses plain JSON for simplicity.
-
-Implementations MAY choose to include a JSON-LD `@context`
-to improve interoperability with existing semantic web tools.
-
-Using JSON-LD is optional and not required by the specification.
-
----
-
-## Trust and verification
-
-Entity Manifest is declarative by design.
-
-An affiliation declared in an Entity Manifest represents a claim made by the publishing entity.
-It does not imply verification, certification, or endorsement.
-
-AI systems and agents may apply their own trust policies, for example:
-
-* requiring reciprocal declarations (bidirectional affiliation)
-* cross-checking with other trusted sources
-* weighting declarations based on reputation or context
-
-Separating declaration from verification is intentional.
-
----
-
-## Ecosystem and future work
-
-Possible extensions around Entity Manifest include:
-
-* online validators
-* visualization tools (entity graphs)
-* agent implementations demonstrating before/after behavior
-* trust and reputation models built on top of declarations
-
-These are intentionally out of scope for the core specification.
+See CONTRIBUTING.md for contribution guidelines.
+This project is licensed under the MIT License — see the LICENSE file for details.
 
 ---
 
-## Status
+# ✅ STEP 2 — Add a **CONTRIBUTING.md**
 
-Entity Manifest is an early-stage open standard proposal.
+---
 
-The goal is to keep the specification minimal, validate real-world usefulness,
-and iterate based on concrete implementations and feedback.
+### 📌 What it is
 
-Contributions, critiques, and real deployments are welcome.
+A simple, clear guide explaining:
 
+- How devs contribute
+- How to format commits
+- How to add examples
+
+This helps lower the barrier for contributions and moderates expectations.
+
+---
+
+### 📌 CONTRIBUTING.md (ready to paste)
+
+```markdown
+# Contributing to Entity Manifest
+
+Thank you for your interest in contributing!  
+This document explains how to contribute in a structured and effective way.
+
+---
+
+## 🛠 How to Contribute
+
+1. **Fork this repository**
+2. **Create a branch for your change**
+   ```sh
+   git checkout -b feature/your-change
