@@ -1,0 +1,16 @@
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Independent Bakery",
+    "type": "local-business",
+    "url": "https://independent-bakery.example"
+  },
+  "claims": {
+    "independent": true,
+    "localProduction": true,
+    "deliveryRadiusKm": 8
+  },
+  "belongsTo": [
+    "https://paris.example/.well-known/hub.json"
+  ]
+}

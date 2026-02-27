@@ -1,0 +1,18 @@
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "City of Grenoble",
+    "type": "public-entity",
+    "url": "https://www.grenoble.fr"
+  },
+  "claims": {
+    "scope": "municipality",
+    "openData": true
+  },
+  "evidence": {
+    "officialWebsite": "https://www.grenoble.fr",
+    "profiles": [
+      "https://www.data.gouv.fr/fr/organizations/ville-de-grenoble"
+    ]
+  }
+}

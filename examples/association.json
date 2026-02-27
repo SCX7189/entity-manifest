@@ -1,0 +1,22 @@
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Paris Astronomy Club",
+    "type": "association",
+    "url": "https://astronomy-club.example"
+  },
+  "claims": {
+    "nonCommercial": true,
+    "educational": true,
+    "audience": [
+      "youth",
+      "adults"
+    ]
+  },
+  "evidence": {
+    "officialWebsite": "https://astronomy-club.example",
+    "documents": [
+      "https://astronomy-club.example/statutes"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "entity-manifest",
+  "version": "1.0.0-rc1",
+  "private": true,
+  "description": "Open specification for machine-readable entity identity metadata.",
+  "license": "MIT",
+  "scripts": {
+    "lint:schema": "node scripts/lint-schema.js",
+    "validate:examples": "node scripts/validate-examples.js",
+    "test:invalid": "node scripts/check-invalid.js",
+    "test": "npm run lint:schema && npm run validate:examples && npm run test:invalid"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

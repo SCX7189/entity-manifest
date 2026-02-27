@@ -1,0 +1,8 @@
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Invalid URL",
+    "type": "local-business",
+    "url": "http://invalid.example"
+  }
+}

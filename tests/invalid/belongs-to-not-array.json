@@ -1,0 +1,9 @@
+{
+  "spec": "entity-manifest/1.0",
+  "entity": {
+    "name": "Bad belongsTo",
+    "type": "association",
+    "url": "https://valid.example"
+  },
+  "belongsTo": "https://example.org/.well-known/hub.json"
+}
